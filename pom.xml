@@ -33,6 +33,7 @@
         <org.project.lombok.version>1.18.12</org.project.lombok.version>
         <org.mapstruct.version>1.3.1.Final</org.mapstruct.version>
         <javax.validation.version>2.0.1.Final</javax.validation.version>
+        <br.uam.lab.soft.version>0.0.1-SNAPSHOT</br.uam.lab.soft.version>
     </properties>
 
     <dependencyManagement>
@@ -58,6 +59,31 @@
                 <groupId>javax.transaction</groupId>
                 <artifactId>javax.transaction-api</artifactId>
                 <version>1.3</version>
+            </dependency>
+            <dependency>
+                <groupId>br.uam.lab.soft</groupId>
+                <artifactId>common</artifactId>
+                <version>${br.uam.lab.soft.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>br.uam.lab.soft</groupId>
+                <artifactId>web-adapter</artifactId>
+                <version>${br.uam.lab.soft.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>br.uam.lab.soft</groupId>
+                <artifactId>database-adapter</artifactId>
+                <version>${br.uam.lab.soft.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>br.uam.lab.soft</groupId>
+                <artifactId>encoder-adapter</artifactId>
+                <version>${br.uam.lab.soft.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>br.uam.lab.soft</groupId>
+                <artifactId>is-application</artifactId>
+                <version>${br.uam.lab.soft.version}</version>
             </dependency>
         </dependencies>
     </dependencyManagement>

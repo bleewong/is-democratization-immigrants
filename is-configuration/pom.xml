@@ -11,5 +11,72 @@
 
     <artifactId>is-configuration</artifactId>
 
+    <properties>
+        <main.class>br.uam.lab.soft</main.class>
+    </properties>
 
+    <dependencies>
+        <dependency>
+            <groupId>br.uam.lab.soft</groupId>
+            <artifactId>common</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>br.uam.lab.soft</groupId>
+            <artifactId>web-adapter</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>br.uam.lab.soft</groupId>
+            <artifactId>database-adapter</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>br.uam.lab.soft</groupId>
+            <artifactId>encoder-adapter</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>br.uam.lab.soft</groupId>
+            <artifactId>is-application</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+        </dependency>
+    </dependencies>
+
+    <build>
+        <resources>
+            <resource>
+                <directory>src/main/resources</directory>
+                <includes>
+                    <include>**/*.properties</include>
+                    <include>**/*.yml</include>
+                    <include>**/*.groovy</include>
+                </includes>
+            </resource>
+        </resources>
+
+        <plugins>
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+                <executions>
+                    <execution>
+                        <goals>
+                            <goal>repackage</goal>
+                            <goal>build-info</goal>
+                        </goals>
+                        <configuration>
+                            <finalName>is-democratization-app</finalName>
+                            <classifier>spring-boot</classifier>
+                            <mainClass>${main.class}</mainClass>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+    </build>
 </project>
