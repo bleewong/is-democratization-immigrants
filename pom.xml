@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>br.uam.lab.soft</groupId>
+    <artifactId>parent-module</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+
+    <name>is-democritization</name>
+    <description>Desenvolvimento de um sistema de informação para a
+        democratização do acesso às informações fundamentais
+        para imigrantes do Peru na cidade de São Paulo
+    </description>
+    <packaging>pom</packaging>
+
+    <modules>
+        <module>is-application</module>
+        <module>is-configuration</module>
+        <module>common</module>
+        <module>adapters/web-adapter</module>
+        <module>adapters/database-adapter</module>
+        <module>adapters/encoder-adapter</module>
+    </modules>
+
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+        <maven.compiler.source>1.8</maven.compiler.source>
+        <maven.compiler.target>1.8</maven.compiler.target>
+
+        <org.springframework.boot.version>2.3.1.RELEASE</org.springframework.boot.version>
+        <org.project.lombok.version>1.18.12</org.project.lombok.version>
+        <org.mapstruct.version>1.3.1.Final</org.mapstruct.version>
+        <javax.validation.version>2.0.1.Final</javax.validation.version>
+    </properties>
+
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-dependencies</artifactId>
+                <version>${org.springframework.boot.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+            <dependency>
+                <groupId>org.mapstruct</groupId>
+                <artifactId>mapstruct</artifactId>
+                <version>${org.mapstruct.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>javax.validation</groupId>
+                <artifactId>validation-api</artifactId>
+                <version>${javax.validation.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>javax.transaction</groupId>
+                <artifactId>javax.transaction-api</artifactId>
+                <version>1.3</version>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+
+</project>

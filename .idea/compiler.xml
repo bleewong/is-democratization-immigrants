@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="common" />
+        <module name="database-adapter" />
+        <module name="encoder-adapter" />
+        <module name="is-configuration" />
+        <module name="is-application" />
+        <module name="web-adapter" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="adapters" target="1.8" />
+      <module name="common" target="1.8" />
+      <module name="database-adapter" target="1.8" />
+      <module name="encoder-adapter" target="1.8" />
+      <module name="is-application" target="1.8" />
+      <module name="is-configuration" target="1.8" />
+      <module name="is-democratization-immigrants" target="1.8" />
+      <module name="web-adapter" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+</project>
