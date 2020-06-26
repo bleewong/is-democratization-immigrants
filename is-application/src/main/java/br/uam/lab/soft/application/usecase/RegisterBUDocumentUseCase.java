@@ -1,4 +1,9 @@
 package br.uam.lab.soft.application.usecase;
 
-public class RegisterBUDocumentUseCase {
+import br.uam.lab.soft.domain.documentation.BUDocument;
+
+public interface RegisterBUDocumentUseCase {
+
+    boolean registerBUDocument(BUDocument buDocument);
+
 }

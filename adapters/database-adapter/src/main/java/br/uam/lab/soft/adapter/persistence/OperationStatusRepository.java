@@ -1,4 +1,6 @@
 package br.uam.lab.soft.adapter.persistence;
 
-public class OperationStatusRepository {
+import org.springframework.data.mongodb.repository.MongoRepository;
+
+public interface OperationStatusRepository extends MongoRepository<OperationStatusEntity, String> {
 }

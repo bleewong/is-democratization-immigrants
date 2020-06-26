@@ -1,4 +1,9 @@
 package br.uam.lab.soft.application.usecase;
 
-public class RegisterCPFDocumentUseCase {
+import br.uam.lab.soft.domain.documentation.CPFDocument;
+
+public interface RegisterCPFDocumentUseCase {
+
+    boolean registerCPFDocument(CPFDocument cpfDocument);
+
 }

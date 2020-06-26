@@ -2,34 +2,19 @@ package br.uam.lab.soft.domain;
 
 import lombok.AccessLevel;
 import lombok.AllArgsConstructor;
-import lombok.Value;
+import lombok.Getter;
 
-import javax.validation.constraints.NotNull;
+import java.util.Date;
 
 @AllArgsConstructor(access = AccessLevel.PRIVATE)
 public class User {
-    private static UserId DEFAULT_VALUE = new UserId(0L);
+    @Getter private final String email;
+    @Getter private final String phoneNumber;
+    @Getter private final String password;
+    @Getter private final String createdDate;
 
-    private final UserId userId;
-    private String email;
-    private String phoneNumber;
-    private String name;
-
-    public static User toRegister(
-            @NotNull String email,
-            @NotNull String phoneNumber,
-            @NotNull String name) {
-        return new User(DEFAULT_VALUE,
-                email,
-                phoneNumber,
-                name
-        );
-    }
-
-    @Value
-    @AllArgsConstructor
-    public static class UserId {
-        private Long id;
+    public static User newUser(String email, String phoneNumber, String password) {
+        return new User(email, phoneNumber, password, new Date().toString());
     }
 
 }

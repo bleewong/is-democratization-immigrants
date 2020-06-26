@@ -1,18 +1,16 @@
 package br.uam.lab.soft.adapter.web.model;
 
-import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.util.List;
+
 @AllArgsConstructor
 @NoArgsConstructor
 @Data
-public class UserDTO {
-
-    @JsonProperty("name")
+public class LoginUserDTO {
+    private String email;
     private String name;
-    @JsonProperty("direction")
-    private String address;
-
+    private List<OrderDTO> orderDTOList;
 }

@@ -1,4 +1,4 @@
-package br.uam.lab.soft.adapter.web.model;
+package br.uam.lab.soft.adapter.web.model.document;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.AllArgsConstructor;

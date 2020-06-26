@@ -1,4 +1,9 @@
 package br.uam.lab.soft.application.usecase;
 
-public class RegisterCTDocumentUseCase {
+import br.uam.lab.soft.domain.documentation.CTDocument;
+
+public interface RegisterCTDocumentUseCase {
+
+    boolean registerCTDocument(CTDocument ctDocument);
+
 }

@@ -4,13 +4,10 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-@AllArgsConstructor
 @NoArgsConstructor
+@AllArgsConstructor
 @Data
-public class RegisterRequest {
-
-    private String email;
-    private String phoneNumber;
-    private String password;
-
+public class ApiError {
+    private String error;
+    private String status;
 }

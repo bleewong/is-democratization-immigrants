@@ -1,4 +1,11 @@
 package br.uam.lab.soft.application.port.out;
 
-public class LoadOperationTypePort {
+import br.uam.lab.soft.domain.OperationType;
+
+import java.util.List;
+
+public interface LoadOperationTypePort {
+
+    List<OperationType> getAllOperationType();
+
 }

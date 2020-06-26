@@ -1,7 +1,5 @@
-package br.uam.lab.soft.adapter.web.model;
+package br.uam.lab.soft.adapter.web.model.document;
 
-import br.uam.lab.soft.adapter.web.model.DateTimeDTO;
-import br.uam.lab.soft.adapter.web.model.PaymentDTO;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.*;
 

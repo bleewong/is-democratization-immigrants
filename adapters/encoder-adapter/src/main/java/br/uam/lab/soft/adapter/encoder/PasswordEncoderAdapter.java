@@ -1,20 +1,25 @@
 package br.uam.lab.soft.adapter.encoder;
 
 import br.uam.lab.soft.application.port.out.EncoderPort;
+import br.uam.lab.soft.common.Adapter;
+import lombok.NoArgsConstructor;
 import lombok.RequiredArgsConstructor;
+import org.springframework.security.crypto.password.PasswordEncoder;
 
 @RequiredArgsConstructor
-public class PasswordEncoder implements EncoderPort {
+@Adapter
+public class PasswordEncoderAdapter implements EncoderPort {
 
-
+    private final PasswordEncoder encoder;
 
     @Override
     public String encode(CharSequence rawPassword) {
-        return null;
+        return encoder.encode(rawPassword);
     }
 
     @Override
     public boolean matches(CharSequence rawPassword, String encodedPassword) {
-        return false;
+        return encoder.matches(rawPassword, encodedPassword);
     }
+
 }
